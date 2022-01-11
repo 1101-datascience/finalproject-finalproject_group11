@@ -14,7 +14,7 @@ A breif introduction about your project, i.e., what is your goal?
 ### Demo 
 Commend to reproduce our result
 ```R
-Rscript performance.R --fold <k> --input data/training --output results/performance.csv
+Rscript performance.R --fold <k> --train data/training --test data/test --report results/performance.csv --predict result/predict.csv
 ```
 * Shiny io app :
 
@@ -62,7 +62,7 @@ Rscript performance.R --fold <k> --input data/training --output results/performa
  ![Random forest model](Random_forest_model.png)
  
 * How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
-  We use cross-validation to evaluate our performance, and also use the addtio.nal indepedent data     set to check our prediction on Kaggle.
+  * We use cross-validation to evaluate our performance, and also use the addtio.nal indepedent data     set to check our prediction on Kaggle.
   ![Kaggle submission](Kaggle.png)
   
   
@@ -70,7 +70,7 @@ Rscript performance.R --fold <k> --input data/training --output results/performa
 ### results
 
 * Which metric do you use 
-  We use RMSE as our metric.
+  * We use RMSE as our metric.
 * Is your improvement significant?
 * What is the challenge part of your project?
 
