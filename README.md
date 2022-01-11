@@ -1,10 +1,10 @@
 # [GroupID] Group 11 Boston Housing price
 
 ### Groups
-*曾偉綱	資科碩二	108753122
-*盧禹叡	經濟碩二	109258026
-*張修誠	資科碩一	110753165
-*邱顯安	資科碩一	110753110
+* 曾偉綱	資科碩二	108753122
+* 盧禹叡	經濟碩二	109258026
+* 張修誠	資科碩一	110753165
+* 邱顯安	資科碩一	110753110
 
 
 
@@ -35,7 +35,7 @@ Rscript performance.R --fold <k> --input data/training --output results/performa
   ```R
   colSums(is.na(data))
   ```
-  ![Missing Value](Missing_value_checking.png)
+  ![Missing Value](Missing _value_checking.png)
     No missing value
   * Outlier check & remove by box plot
   * Skewness check & process
