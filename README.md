@@ -45,14 +45,14 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
 ### code
 
 * Which method do you use?
-  We use Random forest model for our prediction.
+  * We use Random forest model for our prediction.
   ```R
   train_control <- trainControl(method = "none")
 
   model <- train(medv~., data = train_data, method = "rf", trControl = train_control)
   ```
 * What is a null model for comparison?
-  We compare our model with Linear Model & KNN Model respectively
+  * We compare our model with Linear Model & KNN Model respectively
  ```R
  model <- train(medv~., data = train_data, method = "knn", trControl = train_control)
  model <- train(medv~., data = train_data, method = "lm", trControl = train_control)
