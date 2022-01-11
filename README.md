@@ -1,20 +1,22 @@
-# [GroupID] Title of your final project
+# [GroupID] Group 11 Boston Housing price
 
 ### Groups
-* name, student ID1
-* name, student ID2
-* name, student ID3
-* ...
+*曾偉綱	資科碩二	108753122
+*盧禹叡	經濟碩二	109258026
+*張修誠	資科碩一	110753165
+*邱顯安	資科碩一	110753110
+
+
 
 ### Goal
 A breif introduction about your project, i.e., what is your goal?
 
 ### Demo 
-You should provide an example commend to reproduce your result
+Commend to reproduce our result
 ```R
-Rscript code/your_script.R --input data/training --output results/performance.tsv
+Rscript performance.R --fold <k> --input data/training --output results/performance.csv
 ```
-* any on-line visualization
+* Shiny io app :
 
 ## Folder organization and its related information
 
@@ -26,26 +28,57 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 
 ### data
 
-* Source
-* Input format
-* Any preprocessing?
-  * Handle missing data
-  * Scale value
+* Form Kaggle API : $ kaggle competitions download boston-housing
+* Input format : CSV
+* Preprocessing
+  * Check Missing value
+  ```R
+  colSums(is.na(data))
+  ```
+  ![Missing Value](Missing value checking.png)
+    No missing value
+  * Outlier check & remove by box plot
+  * Skewness check & process
+  * Correlated Heat Map between Features 
+  
 
 ### code
 
 * Which method do you use?
-* What is a null model for comparison?
-* How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
+  We use Random forest model for our prediction.
+  ```R
+  train_control <- trainControl(method = "none")
 
+  model <- train(medv~., data = train_data, method = "rf", trControl = train_control)
+  ```
+* What is a null model for comparison?
+  We compare our model with Linear Model & KNN Model respectively
+ ```R
+ model <- train(medv~., data = train_data, method = "knn", trControl = train_control)
+ model <- train(medv~., data = train_data, method = "lm", trControl = train_control)
+ ```
+ ![KNN model](KNN model.png)
+ ![Linear regression model](Linear Regression model.png)
+ ![Random forest model](Random forest model.png)
+ 
+* How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
+  We use cross-validation to evaluate our performance, and also use the addtio.nal indepedent data     set to check our prediction on Kaggle.
+  ![Kaggle submission](Kaggle.png)
+  
+  
+  
 ### results
 
 * Which metric do you use 
-  * precision, recall, R-square
+  We use RMSE as our metric.
 * Is your improvement significant?
 * What is the challenge part of your project?
 
 ## References
-* Code/implementation which you include/reference (__You should indicate in your presentation if you use code for others. Otherwise, cheating will result in 0 score for final project.__)
 * Packages you use
+  ```R
+  library(caret)
+  library(randomForest)  
+  ```
 * Related publications
+  https://www.kaggle.com/c/boston-housing/overview
