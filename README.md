@@ -57,9 +57,9 @@ Rscript performance.R --fold <k> --input data/training --output results/performa
  model <- train(medv~., data = train_data, method = "knn", trControl = train_control)
  model <- train(medv~., data = train_data, method = "lm", trControl = train_control)
  ```
- ![KNN model](KNN model.png)
- ![Linear regression model](Linear Regression model.png)
- ![Random forest model](Random forest model.png)
+ ![KNN model](KNN_model.png)
+ ![Linear regression model](Linear_Regression_model.png)
+ ![Random forest model](Random_forest_model.png)
  
 * How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
   We use cross-validation to evaluate our performance, and also use the addtio.nal indepedent data     set to check our prediction on Kaggle.
