@@ -35,7 +35,7 @@ Rscript performance.R --fold <k> --input data/training --output results/performa
   ```R
   colSums(is.na(data))
   ```
-  ![Missing Value](Missing value checking.png)
+  ![Missing Value](Missing_value_checking.png)
     No missing value
   * Outlier check & remove by box plot
   * Skewness check & process
