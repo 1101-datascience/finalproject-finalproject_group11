@@ -13,15 +13,17 @@ A breif introduction about your project, i.e., what is your goal?
 
 ### Demo 
 Commend to reproduce our result
+
 ```R
 Rscript performance.R --fold <k> --train data/training --test data/test --report results/performance.csv --predict result/predict.csv
 ```
-* Shiny io app :
+* Shiny io app : https://brianchiu.shinyapps.io/finalproject/
 
 ## Folder organization and its related information
 
 ### docs
 * Your presentation, 1101_datascience_FP_<yourID|groupName>.ppt/pptx/pdf, by **Jan. 13**
+  * In the Doc file above
 * Any related document for the final project
   * papers
   * software user guide
@@ -52,7 +54,7 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
   model <- train(medv~., data = train_data, method = "rf", trControl = train_control)
   ```
 * What is a null model for comparison?
-  * We compare our model with Linear Model & KNN Model respectively
+  * We compare our model with different select respectively
  ```R
  model <- train(medv~., data = train_data, method = "knn", trControl = train_control)
  model <- train(medv~., data = train_data, method = "lm", trControl = train_control)
@@ -62,7 +64,7 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
  ![Random forest model](Random_forest_model.png)
  
 * How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
-  * We use cross-validation to evaluate our performance, and also use the addtio.nal indepedent data     set to check our prediction on Kaggle.
+  * We use cross-validation to evaluate our performance, and also use the addtional indepedent dataset to check our prediction on Kaggle.
   ![Kaggle submission](Kaggle.png)
   
   
@@ -72,7 +74,9 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
 * Which metric do you use 
   * We use RMSE as our metric.
 * Is your improvement significant?
+  * Yes, we improve the RMSE from 3.45 to 3.41
 * What is the challenge part of your project?
+  * Test chose the most appropriate features
 
 ## References
 * Packages you use
@@ -82,3 +86,6 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
   ```
 * Related publications
   https://www.kaggle.com/c/boston-housing/overview
+  https://shiny.rstudio.com/gallery/
+  https://www.rdocumentation.org/packages/randomForest/versions/4.6-14/topics/importance
+  
