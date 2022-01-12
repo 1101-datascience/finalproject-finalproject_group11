@@ -23,7 +23,7 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
 
 ### docs
 * Your presentation, 1101_datascience_FP_<yourID|groupName>.ppt/pptx/pdf, by **Jan. 13**
-  * In the Doc file above
+  * ![Final project PTT](DS_final_project_group11.pdf)
 * Any related document for the final project
   * papers
   * software user guide
