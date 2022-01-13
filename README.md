@@ -82,7 +82,9 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
 * Packages you use
   ```R
   library(caret)
-  library(randomForest)  
+  library(randomForest)
+  library(ggvis)
+  library(shiny)
   ```
 * Related publications
   https://www.kaggle.com/c/boston-housing/overview
