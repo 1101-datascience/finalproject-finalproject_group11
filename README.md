@@ -87,7 +87,10 @@ Rscript performance.R --fold <k> --train data/training --test data/test --report
   library(shiny)
   ```
 * Related publications
-  https://www.kaggle.com/c/boston-housing/overview
-  https://shiny.rstudio.com/gallery/
-  https://www.rdocumentation.org/packages/randomForest/versions/4.6-14/topics/importance
+    * Kaggle
+        * https://www.kaggle.com/c/boston-housing/overview
+    * shiny templete 
+        * https://shiny.rstudio.com/gallery/
+    * package
+        * https://www.rdocumentation.org/packages/randomForest/versions/4.6-14/topics/importance
   
