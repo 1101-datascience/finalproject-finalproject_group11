@@ -1,0 +1,14 @@
+name: finalproject
+title: finalproject
+username:
+account: brianchiu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5425697
+bundleId: 5460520
+url: https://brianchiu.shinyapps.io/finalproject/
+when: 1641993287.14283
+lastSyncTime: 1641993287.14284
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: visualize.R
